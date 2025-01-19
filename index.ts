@@ -1,5 +1,17 @@
-import env from "./modules/env";
+import { Command } from "commander";
+import app from "./package.json";
+import init from "./commands/init";
 
-env.load().then(() => {
-  const data = env.get("APP_NAME");
-});
+const program = new Command();
+
+program
+  .name("guwa")
+  .description("REST API that simplifies WhatsApp integration")
+  .version(app.version);
+
+program
+  .command("init")
+  .description("Init GUWA configuration file")
+  .action(init);
+
+program.parse();

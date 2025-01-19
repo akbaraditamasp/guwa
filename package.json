@@ -1,6 +1,7 @@
 {
   "name": "guwa",
   "module": "index.ts",
+  "version": "1.0.0-alpha.1",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
@@ -9,6 +10,10 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@inquirer/prompts": "^7.2.3",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "boxen": "^8.0.1",
+    "commander": "^13.0.0",
     "zod": "^3.24.1"
   }
 }
